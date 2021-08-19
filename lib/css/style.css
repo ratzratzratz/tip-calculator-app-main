@@ -1,0 +1,166 @@
+:root{
+    --bg-color: hsl(185, 41%, 84%);
+    --cyan: hsl(172, 67%, 45%);
+    --black: hsl(183, 100%, 15%);
+    --white: rgb(255, 255, 255);
+    --alarm: rgb(255, 0, 0);
+}
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+body{
+    font-family: 'Space Mono', monospace;
+    background-color: var(--bg-color);
+}
+body,
+h5{
+    font-size: 16px;
+}
+.wrap{
+    background-color: var(--white);
+    border-radius: 20px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+    max-width: 1440px;
+}
+input[type=button].active{
+    background-color: var(--cyan);
+    color: var(--black);
+}
+input[type=text].active{
+    background-color: var(--cyan);
+    color: var(--white);
+}
+h1{
+    text-align: center;
+    padding-top: 7%;
+    padding-bottom: 4%;
+}
+input[type=button].active,
+input[type=text].active,
+h1,
+.cyan{
+    font-weight: 700;
+}
+h5{
+    margin:7% 0% 2% 0%;
+}
+.font-s{
+    font-weight: 400;
+}
+span::after{ /*creates whitespace/ single line break*/
+    content: '\A';
+    white-space: pre;
+}
+.cyan{
+    color: var(--cyan);
+    display: inline;
+    font-size: 30px;
+}
+.col{
+    margin: 2%;
+}
+.right{
+    background-color: var(--black);
+    padding: 3%;
+}
+.white_font{
+    color: var(--white);
+}
+.left,
+.right{
+    margin: 5%;
+    border-radius: 20px;
+}
+input[type=reset]{
+    display: block;
+    width: 80%;
+    margin-top: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:  var(--cyan);
+    border: none;
+    height: 2.5em;
+    border-radius: 4px;
+}
+input[type=text]{
+    border: none;
+    background-color: hsl(180, 46%, 86%);
+    border-radius: 5px;
+    text-align: right;
+    opacity: 70%;
+    font-size: 18px;
+    width: 103%;
+}
+input[type=button]{
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+label{
+    display: inline;
+    position: absolute; /*puts icon inside input field*/
+    left: 10%;
+}
+input:hover:not(input[type=button],input[type=reset]){
+    outline:1px solid  var(--cyan);
+}
+input[type=reset]:active,
+input[type=reset]:hover,
+input[type=button]:hover,
+input[type=button]:active{
+    background-color: hsl(185, 41%, 84%);
+    cursor: pointer;
+}
+input[type=button]:hover,
+input[type=button]:active{
+    color: var(--black);
+}    
+.total_amount,
+.tip_amount{
+    font-size: 23px;
+}
+input[type=reset].cameleon{
+    background-color: hsl(186, 14%, 43%);
+}
+input[type=text].alarm{
+    outline: 2px solid var(--alarm);
+}
+.alarmtext{
+    color: var(--alarm);
+    font-size: 12px;
+    text-align: right;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media  screen and (max-width:575px) {
+    .cyan{
+        text-align: center;
+    }
+}
+@media  screen and (max-width:500px) {
+    .wrap{width: 100%;}
+    h1{opacity: 60%;}
+    input[type=text]:not(#custom){
+        width: 90%;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    label{font-size: 22px;}
+    #custom{
+        font-weight: 700;
+    }
+    .col{padding: 6%;}
+    .cyan{
+        text-align: right;
+        font-size: 30px;
+    }
+    .alarmtext{
+        color: var(--alarm);
+        font-size: 13px;
+        text-align: center;
+    }
+}
